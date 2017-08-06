@@ -1,0 +1,42 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "47359c69f8317cc7e76967a394648418",
+    "packages": [
+        {
+            "name": "renegat59/glicerine",
+            "version": "0.0.1",
+            "dist": {
+                "type": "path",
+                "url": "../glicerine",
+                "reference": "bea926fb9bceac1c39367e22340e93dbbdf6e150",
+                "shasum": null
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Glicerine\\": "src",
+                    "Glicerine\\tests\\": "tests"
+                }
+            },
+            "authors": [
+                {
+                    "name": "Mateusz P",
+                    "email": "bananq@gmail.com"
+                }
+            ],
+            "description": "Glicerine is a simple CLI library for PHP"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": []
+}
