@@ -14,5 +14,10 @@
     ],
     "require": {
         "renegat59/glicerine": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "glicerineexample\\": "src"
+        }
     }
 }
