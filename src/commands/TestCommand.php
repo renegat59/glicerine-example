@@ -12,10 +12,18 @@ use Glicerine\validators\BooleanValidator;
 
 class TestCommand extends \Glicerine\core\Command
 {
-    public function validation()
+    public function validationRules()
     {
         return [
-            'on' => BooleanValidator::class
+            'beta' => [
+                'on' => [BooleanValidator::class],
+                'enabled' => [
+                    [
+                        'class' => BooleanValidator::class,
+                        'filter' => false
+                    ]
+                ]
+            ]
         ];
     }
 
@@ -26,6 +34,7 @@ class TestCommand extends \Glicerine\core\Command
 
     public function beta()
     {
+        var_dump($this->getParam('on'));
         echo "this is beta";
     }
 
