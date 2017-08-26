@@ -8,9 +8,13 @@
 
 namespace glicerineexample\commands;
 
+use Glicerine\console\Color;
+use Glicerine\console\Output;
 use Glicerine\core\Command;
 use Glicerine\core\ExitCode;
 use Glicerine\validators\BooleanValidator;
+use Glicerine\validators\NumericValidator;
+use Glicerine\validators\RequiredValidator;
 
 class TestCommand extends Command
 {
@@ -18,14 +22,24 @@ class TestCommand extends Command
     {
         return [
             'beta' => [
-                'on' => [BooleanValidator::class],
+                'on' => [BooleanValidator::class, RequiredValidator::class],
                 'enabled' => [
                     [
                         'class' => BooleanValidator::class,
                         'filter' => false,
                         'tfValues' => ['yes', 'no']
-                    ]
+                    ],
+                    RequiredValidator::class
                 ]
+            ],
+            'numbers' => [
+                'num' => [
+                    [
+                        'class' => NumericValidator::class,
+//                        'onlyInt' => true,
+                    ]
+                ],
+                'bool' => [BooleanValidator::class]
             ]
         ];
     }
@@ -33,8 +47,14 @@ class TestCommand extends Command
     protected function enabledActions(): array
     {
         return [
-//            'beta'
+            'numbers'
         ];
+    }
+
+    public function numbers()
+    {
+        Output::writeLine($this->getParam('num'), Color::CYAN);
+        return ExitCode::SUCCESS;
     }
 
     public function beta()
