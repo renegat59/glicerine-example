@@ -20,16 +20,19 @@ class TestCommand extends \Glicerine\core\Command
                 'enabled' => [
                     [
                         'class' => BooleanValidator::class,
-                        'filter' => false
+                        'filter' => false,
+                        'tfValues' => ['yes', 'no']
                     ]
                 ]
             ]
         ];
     }
 
-    public function actions()
+    protected function enabledActions(): array
     {
-        
+        return [
+            'beta'
+        ];
     }
 
     public function beta()
