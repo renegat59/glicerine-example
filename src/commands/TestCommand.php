@@ -8,9 +8,11 @@
 
 namespace glicerineexample\commands;
 
+use Glicerine\core\Command;
+use Glicerine\core\ExitCode;
 use Glicerine\validators\BooleanValidator;
 
-class TestCommand extends \Glicerine\core\Command
+class TestCommand extends Command
 {
     public function validationRules()
     {
@@ -31,7 +33,7 @@ class TestCommand extends \Glicerine\core\Command
     protected function enabledActions(): array
     {
         return [
-            'beta'
+//            'beta'
         ];
     }
 
@@ -39,10 +41,12 @@ class TestCommand extends \Glicerine\core\Command
     {
         var_dump($this->getParam('on'));
         echo "this is beta";
+        return ExitCode::SUCCESS;
     }
 
     public function main()
     {
         echo "this is a test function";
+        return ExitCode::SUCCESS;
     }
 }
