@@ -36,7 +36,8 @@ class TestCommand extends Command
                 'num' => [
                     [
                         'class' => NumericValidator::class,
-//                        'onlyInt' => true,
+                        'onlyInt' => true,
+                        'range' => [0, 10]
                     ]
                 ],
                 'bool' => [BooleanValidator::class]
