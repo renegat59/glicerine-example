@@ -4,17 +4,31 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "47359c69f8317cc7e76967a394648418",
+    "content-hash": "7aba7f0afb9fe42a96e764eb0768850f",
     "packages": [
         {
             "name": "renegat59/glicerine",
-            "version": "0.0.1",
-            "dist": {
-                "type": "path",
-                "url": "../glicerine",
-                "reference": "bea926fb9bceac1c39367e22340e93dbbdf6e150",
-                "shasum": null
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/renegat59/glicerine.git",
+                "reference": "b7d0df1fc3c64cb354e2f87f5c13fc9d029d9416"
             },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/renegat59/glicerine/zipball/b7d0df1fc3c64cb354e2f87f5c13fc9d029d9416",
+                "reference": "b7d0df1fc3c64cb354e2f87f5c13fc9d029d9416",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.0.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^6.3"
+            },
+            "bin": [
+                "bin/run"
+            ],
             "type": "library",
             "autoload": {
                 "psr-4": {
@@ -22,19 +36,26 @@
                     "Glicerine\\tests\\": "tests"
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "mit"
+            ],
             "authors": [
                 {
                     "name": "Mateusz P",
                     "email": "bananq@gmail.com"
                 }
             ],
-            "description": "Glicerine is a simple CLI library for PHP"
+            "description": "Glicerine is a simple CLI library for PHP",
+            "time": "2018-06-10T10:07:49+00:00"
         }
     ],
     "packages-dev": [],
     "aliases": [],
-    "minimum-stability": "stable",
-    "stability-flags": [],
+    "minimum-stability": "dev",
+    "stability-flags": {
+        "renegat59/glicerine": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],

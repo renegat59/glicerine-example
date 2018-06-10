@@ -1,23 +1,24 @@
 {
-    "name": "mateusz/glicerine-example",
+    "name": "renegat59/glicerine-example",
     "authors": [
         {
             "name": "Mateusz P",
             "email": "bananq@gmail.com"
         }
     ],
-    "repositories": [
-        {
-            "type": "path",
-            "url": "../glicerine"
-        }
-    ],
-    "require": {
+    "minimum-stability": "dev",
+    "require":{
         "renegat59/glicerine": "*"
     },
     "autoload": {
         "psr-4": {
             "glicerineexample\\": "src"
+        }
+    },
+    "config": {
+        "preferred-install": {
+            "renegat59/glicerine": "source",
+            "*": "dist"
         }
     }
 }
