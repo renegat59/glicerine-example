@@ -4,16 +4,21 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "b53b1846d748356a0304ff9bbc1e736f",
+    "content-hash": "be2dac131a03e40c9bbda67d5ecd72c6",
     "packages": [
         {
-            "name": "renegat59/glicerine-local",
-            "version": "0.0.1@dev",
+            "name": "renegat59/glicerine",
+            "version": "0.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/renegat59/glicerine.git",
+                "reference": "82719b1e331d8538bfc95813a5ae336a8078cb2d"
+            },
             "dist": {
-                "type": "path",
-                "url": "../glicerine",
-                "reference": "56eaedfc86c72c37c0d78ffb767bcd916f979aa5",
-                "shasum": null
+                "type": "zip",
+                "url": "https://api.github.com/repos/renegat59/glicerine/zipball/82719b1e331d8538bfc95813a5ae336a8078cb2d",
+                "reference": "82719b1e331d8538bfc95813a5ae336a8078cb2d",
+                "shasum": ""
             },
             "require": {
                 "php": ">=7.0.0"
@@ -31,11 +36,7 @@
                     "Glicerine\\tests\\": "tests"
                 }
             },
-            "scripts": {
-                "test": [
-                    "./vendor/bin/phpunit -c phpunit.xml"
-                ]
-            },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "mit"
             ],
@@ -45,12 +46,13 @@
                     "email": "bananq@gmail.com"
                 }
             ],
-            "description": "Glicerine is a simple CLI library for PHP"
+            "description": "Glicerine is a simple CLI library for PHP",
+            "time": "2018-06-10T18:21:26+00:00"
         }
     ],
     "packages-dev": [],
     "aliases": [],
-    "minimum-stability": "dev",
+    "minimum-stability": "stable",
     "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,

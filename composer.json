@@ -6,9 +6,8 @@
             "email": "bananq@gmail.com"
         }
     ],
-    "minimum-stability": "dev",
     "require": {
-        "renegat59/glicerine": "*"
+        "renegat59/glicerine": "0.1.x"
     },
     "autoload": {
         "psr-4": {
