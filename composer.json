@@ -7,7 +7,7 @@
         }
     ],
     "minimum-stability": "dev",
-    "require":{
+    "require": {
         "renegat59/glicerine": "*"
     },
     "autoload": {
@@ -15,10 +15,5 @@
             "glicerineexample\\": "src"
         }
     },
-    "config": {
-        "preferred-install": {
-            "renegat59/glicerine": "source",
-            "*": "dist"
-        }
-    }
+    "require-dev": {}
 }

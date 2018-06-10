@@ -18,44 +18,22 @@ use Glicerine\validators\RequiredValidator;
 
 class TestCommand extends Command
 {
-    public function validationRules()
+
+    protected function init()
     {
-        return [
-            'beta' => [
-                'on' => [BooleanValidator::class, RequiredValidator::class],
-                'enabled' => [
-                    [
-                        'class' => BooleanValidator::class,
-                        'filter' => false,
-                        'tfValues' => ['yes', 'no']
-                    ],
-                    RequiredValidator::class
-                ]
-            ],
-            'numbers' => [
-                'num' => [
-                    [
-                        'class' => NumericValidator::class,
-                        'onlyInt' => true,
-                        'range' => [0, 10]
-                    ]
+        $this->proto('beta', 'Beta description')
+            ->addParamRule('on', RequiredValidator::class)
+            ->addParamRule('on', BooleanValidator::class)
+            ->addParamDescription('on', 'On Description')
+            ->addParamRules('enabled', [
+                [
+                    'class' => BooleanValidator::class,
+                    'filter' => false,
+                    'tfValues' => ['yes', 'no']
                 ],
-                'bool' => [BooleanValidator::class]
-            ]
-        ];
-    }
-
-    protected function enabledActions(): array
-    {
-        return [
-            'numbers'
-        ];
-    }
-
-    public function numbers()
-    {
-        Output::writeLine($this->getParam('num'), Color::CYAN);
-        return ExitCode::SUCCESS;
+                RequiredValidator::class
+            ])
+            ->addParamDescription('enabled', 'Enabled Description');
     }
 
     public function beta()
@@ -67,7 +45,7 @@ class TestCommand extends Command
 
     public function main()
     {
-        echo "this is a test function";
+        Output::writeLine("this is a test function", Color::BLUE);
         return ExitCode::SUCCESS;
     }
 }
